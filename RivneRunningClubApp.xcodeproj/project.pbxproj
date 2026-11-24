@@ -1,0 +1,159 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+		FILEREFBF53485EA459 /* AppTheme.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		FILEREF5D6E5A794E14 /* ClubSiteRepository.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubSiteRepository.swift; sourceTree = "<group>"; };
+		FILEREF891D6F237450 /* ContentView.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FILEREFA8CF7586F882 /* Models.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FILEREF1AA1483BE290 /* NativePages.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativePages.swift; sourceTree = "<group>"; };
+		FILEREFAF85CA0512C2 /* RivneRunningClubApp.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RivneRunningClubApp.swift; sourceTree = "<group>"; };
+		FILEREF4632F163B897 /* ScrapeConfig.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapeConfig.swift; sourceTree = "<group>"; };
+		FILEREFF6C4188222B2 /* TrainingSchedule.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSchedule.swift; sourceTree = "<group>"; };
+		PLISTREF2F45649B13BA /* Info.plist */ = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		PRODUCTREFBD1E0B2664FB /* RivneRunningClubApp.app */ = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RivneRunningClubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		PBXGROUP1A28DC57E16F /* Project */ = { isa = PBXGroup; children = (
+			APPGROUPF28DFB2F1C4D /* RivneRunningClubApp */,
+			PRODGROUPE16A6DC27FD9 /* Products */,
+			FRAMEWORKS2914D791DC38 /* Frameworks */
+		); sourceTree = "<group>"; };
+		APPGROUPF28DFB2F1C4D /* RivneRunningClubApp */ = { isa = PBXGroup; children = (
+			FILEREFBF53485EA459 /* AppTheme.swift */,
+			FILEREF5D6E5A794E14 /* ClubSiteRepository.swift */,
+			FILEREF891D6F237450 /* ContentView.swift */,
+			FILEREFA8CF7586F882 /* Models.swift */,
+			FILEREF1AA1483BE290 /* NativePages.swift */,
+			FILEREFAF85CA0512C2 /* RivneRunningClubApp.swift */,
+			FILEREF4632F163B897 /* ScrapeConfig.swift */,
+			FILEREFF6C4188222B2 /* TrainingSchedule.swift */,
+			PLISTREF2F45649B13BA /* Info.plist */
+		); path = RivneRunningClubApp; sourceTree = "<group>"; };
+		PRODGROUPE16A6DC27FD9 /* Products */ = { isa = PBXGroup; children = (
+			PRODUCTREFBD1E0B2664FB /* RivneRunningClubApp.app */
+		); sourceTree = "<group>"; };
+		FRAMEWORKS2914D791DC38 /* Frameworks */ = { isa = PBXGroup; children = (); sourceTree = "<group>"; };
+		BUILDFILE1EE6187B1574 /* AppTheme.swift in Sources */ = { isa = PBXBuildFile; fileRef = FILEREFBF53485EA459 /* AppTheme.swift */; };
+		BUILDFILE1377A1064218 /* ClubSiteRepository.swift in Sources */ = { isa = PBXBuildFile; fileRef = FILEREF5D6E5A794E14 /* ClubSiteRepository.swift */; };
+		BUILDFILE3A98C74AB1F5 /* ContentView.swift in Sources */ = { isa = PBXBuildFile; fileRef = FILEREF891D6F237450 /* ContentView.swift */; };
+		BUILDFILE8DC0CB1D18EA /* Models.swift in Sources */ = { isa = PBXBuildFile; fileRef = FILEREFA8CF7586F882 /* Models.swift */; };
+		BUILDFILEC76D396680B6 /* NativePages.swift in Sources */ = { isa = PBXBuildFile; fileRef = FILEREF1AA1483BE290 /* NativePages.swift */; };
+		BUILDFILE81CE6229F2D3 /* RivneRunningClubApp.swift in Sources */ = { isa = PBXBuildFile; fileRef = FILEREFAF85CA0512C2 /* RivneRunningClubApp.swift */; };
+		BUILDFILEB23F47353FC6 /* ScrapeConfig.swift in Sources */ = { isa = PBXBuildFile; fileRef = FILEREF4632F163B897 /* ScrapeConfig.swift */; };
+		BUILDFILE418D79214C41 /* TrainingSchedule.swift in Sources */ = { isa = PBXBuildFile; fileRef = FILEREFF6C4188222B2 /* TrainingSchedule.swift */; };
+		SOURCEPHASEDF800745E6EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BUILDFILE1EE6187B1574 /* AppTheme.swift in Sources */,
+				BUILDFILE1377A1064218 /* ClubSiteRepository.swift in Sources */,
+				BUILDFILE3A98C74AB1F5 /* ContentView.swift in Sources */,
+				BUILDFILE8DC0CB1D18EA /* Models.swift in Sources */,
+				BUILDFILEC76D396680B6 /* NativePages.swift in Sources */,
+				BUILDFILE81CE6229F2D3 /* RivneRunningClubApp.swift in Sources */,
+				BUILDFILEB23F47353FC6 /* ScrapeConfig.swift in Sources */,
+				BUILDFILE418D79214C41 /* TrainingSchedule.swift in Sources */
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		RESOURCEPHASE292574D586AF /* Resources */ = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		FRAMEPHASEEB6B06F6C74D /* Frameworks */ = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		TARGET6C8F775C687C /* RivneRunningClubApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CONFIGLISTA662236015CD /* Build configuration list for PBXNativeTarget "RivneRunningClubApp" */;
+			buildPhases = (
+				SOURCEPHASEDF800745E6EB /* Sources */,
+				RESOURCEPHASE292574D586AF /* Resources */,
+				FRAMEPHASEEB6B06F6C74D /* Frameworks */
+			);
+			buildRules = ();
+			dependencies = ();
+			name = RivneRunningClubApp;
+			productName = RivneRunningClubApp;
+			productReference = PRODUCTREFBD1E0B2664FB /* RivneRunningClubApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEBUGCFG135850C701A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/RivneRunningClubApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rivnerun.club.RivneRunningClubApp;
+				PRODUCT_NAME = $(TARGET_NAME);
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		RELEASECFGEADE1CA35A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/RivneRunningClubApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rivnerun.club.RivneRunningClubApp;
+				PRODUCT_NAME = $(TARGET_NAME);
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CONFIGLISTA662236015CD /* Build configuration list for PBXNativeTarget "RivneRunningClubApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBUGCFG135850C701A5 /* Debug */,
+				RELEASECFGEADE1CA35A93 /* Release */
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		PROJECTCFG3FCC0EA1B02C /* Project object */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBUGCFG135850C701A5 /* Debug */,
+				RELEASECFGEADE1CA35A93 /* Release */
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		PBXPROJ27C0C912135B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {};
+			buildConfigurationList = PROJECTCFG3FCC0EA1B02C /* Project object */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base, uk);
+			mainGroup = PBXGROUP1A28DC57E16F /* Project */;
+			productRefGroup = PRODGROUPE16A6DC27FD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TARGET6C8F775C687C /* RivneRunningClubApp */
+			);
+		};
+	
+	};
+	rootObject = PBXPROJ27C0C912135B /* Project object */;
+}
