@@ -1,0 +1,46 @@
+
+workflows:
+  ios-native-build:
+    name: Rivne Running Club - iOS Build
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+
+    environment:
+      xcode: latest
+
+    scripts:
+      - name: Install XcodeGen
+        script: |
+          brew install xcodegen
+
+      - name: Generate Xcode project
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcodegen generate --spec project.yml
+
+      - name: Resolve Swift packages
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcodebuild -resolvePackageDependencies \
+            -project "RivneRunningClubApp.xcodeproj" \
+            -scheme "RivneRunningClubApp"
+
+      - name: List available schemes
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcodebuild -list \
+            -project "RivneRunningClubApp.xcodeproj"
+
+      - name: Build iOS application without signing
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcodebuild build \
+            -project "RivneRunningClubApp.xcodeproj" \
+            -scheme "RivneRunningClubApp" \
+            -configuration Debug \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO
+
+    artifacts:
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/Products/**/*.app
+      - /tmp/xcodebuild_logs/*.log
