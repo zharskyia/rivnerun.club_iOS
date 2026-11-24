@@ -1,40 +1,46 @@
+
 workflows:
-  ios-unsigned-ipa:
-    name: iOS unsigned IPA
+  ios-native-build:
+    name: Rivne Running Club - iOS Build
+    max_build_duration: 60
     instance_type: mac_mini_m2
-    max_build_duration: 30
+
     environment:
       xcode: latest
-      vars:
-        XCODE_PROJECT: "RivneRunningClubApp.xcodeproj"
-        XCODE_SCHEME: "RivneRunningClubApp"
-        APP_NAME: "RivneRunningClubApp"
-    scripts:
-      - name: Build .app (Release, iphoneos, unsigned)
-        script: |
-          set -e
-          xcodebuild \
-            -project "$XCODE_PROJECT" \
-            -scheme "$XCODE_SCHEME" \
-            -configuration Release \
-            -sdk iphoneos \
-            -destination 'generic/platform=iOS' \
-            -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY="" \
-            build
 
-      - name: Package .ipa
+    scripts:
+      - name: Install XcodeGen
         script: |
-          set -e
-          APP_PATH="build/Build/Products/Release-iphoneos/$APP_NAME.app"
-          test -d "$APP_PATH" || { echo "App not found: $APP_PATH"; exit 1; }
-          rm -rf Payload
-          mkdir Payload
-          cp -R "$APP_PATH" Payload/
-          zip -qry "$APP_NAME-unsigned.ipa" Payload
-          ls -lh "$APP_NAME-unsigned.ipa"
+          brew install xcodegen
+
+      - name: Generate Xcode project
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcodegen generate --spec project.yml
+
+      - name: Resolve Swift packages
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcodebuild -resolvePackageDependencies \
+            -project "RivneRunningClubApp.xcodeproj" \
+            -scheme "RivneRunningClubApp"
+
+      - name: List available schemes
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcodebuild -list \
+            -project "RivneRunningClubApp.xcodeproj"
+
+      - name: Build iOS application without signing
+        script: |
+          cd "$CM_BUILD_DIR"
+          xcodebuild build \
+            -project "RivneRunningClubApp.xcodeproj" \
+            -scheme "RivneRunningClubApp" \
+            -configuration Debug \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO
 
     artifacts:
-      - "*.ipa"
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/Products/**/*.app
+      - /tmp/xcodebuild_logs/*.log
